@@ -1,0 +1,8 @@
+# Claude Agent SDK
+claude-code-sdk>=0.0.25
+
+# Async HTTP client (for MCP servers)
+aiohttp>=3.9.0
+
+# Environment variables
+python-dotenv>=1.0.0
