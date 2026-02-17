@@ -1,0 +1,78 @@
+{
+  "name": "autonomous-project-creator",
+  "version": "1.0.0",
+  "description": "自主项目构建器 - 由 Claude 驱动的自主编码代理",
+  "author": "lynphoenix",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "autonomous-create",
+      "description": "创建新的自主开发项目",
+      "parameters": {
+        "projectDir": {
+          "type": "string",
+          "description": "项目目录路径",
+          "default": "./autonomous_project"
+        },
+        "model": {
+          "type": "string",
+          "description": "使用的 Claude 模型",
+          "default": ""
+        },
+        "maxIterations": {
+          "type": "number",
+          "description": "最大迭代次数",
+          "default": 0
+        }
+      }
+    },
+    {
+      "name": "autonomous-continue",
+      "description": "继续已存在的自主开发项目",
+      "parameters": {
+        "projectDir": {
+          "type": "string",
+          "description": "项目目录路径",
+          "default": "./autonomous_project"
+        }
+      }
+    },
+    {
+      "name": "autonomous-status",
+      "description": "查看项目开发进度",
+      "parameters": {
+        "projectDir": {
+          "type": "string",
+          "description": "项目目录路径",
+          "default": "./autonomous_project"
+        }
+      }
+    }
+  ],
+  "skills": [
+    {
+      "name": "autonomous-development",
+      "description": "使用自主代理从规范文档自动构建应用程序"
+    }
+  ],
+  "hooks": {},
+  "mcp_servers": {},
+  "env": {
+    "ANTHROPIC_API_KEY": {
+      "description": "Anthropic API 密钥（必填）",
+      "required": true
+    },
+    "ANTHROPIC_BASE_URL": {
+      "description": "API 基础 URL",
+      "default": "https://api.anthropic.com"
+    },
+    "ANTHROPIC_MODEL": {
+      "description": "默认使用的模型",
+      "default": "claude-sonnet-4-5-20250929"
+    },
+    "DISABLE_SANDBOX": {
+      "description": "禁用沙盒（不推荐）",
+      "default": "false"
+    }
+  }
+}
