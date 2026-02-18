@@ -185,12 +185,12 @@ autonomous-project-creator/
 
 ### 自定义 API 端点
 
-您可以使用其他兼容的 API 提供商，例如 302.ai：
+您可以使用其他兼容的 API 提供商，例如 [babelark.com](https://www.babelark.com/)：
 
 ```bash
 # 在 .env 文件中或命令行设置
-export ANTHROPIC_BASE_URL=https://api.302.ai
-export ANTHROPIC_MODEL=glm-4.7-coding-preview
+export ANTHROPIC_BASE_URL=https://api.babelark.com
+export ANTHROPIC_MODEL=claude-opus-4.5-20251101
 ```
 
 ## 安全模型
